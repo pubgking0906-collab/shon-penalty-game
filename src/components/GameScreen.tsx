@@ -185,7 +185,7 @@ export default function GameScreen({ onGameEnd }: GameScreenProps) {
     if (phase === 'shooting' || phase === 'result') {
       // Goalkeeper dives
       const diveDirection = goalkeeperPosition < 50 ? 'left' : 'right';
-      const diveAmount = Math.abs(goalkeeperPosition - 50);
+      
       return {
         transform: `translateX(${(goalkeeperPosition - 50) * 1.5}px) ${diveDirection === 'left' ? 'rotate(-30deg)' : 'rotate(30deg)'}`,
         transition: 'transform 0.3s ease-out'
